@@ -17,7 +17,6 @@
 
     <!-- Header -->
     <header>
-
         <nav>
             <h3>Almadina Computer</h3>
 
@@ -26,52 +25,42 @@
             <a href="#services">Services</a>
             <a href="#contact">Contact</a>
         </nav>
-
     </header>
 
 
-    <!-- Main Content -->
+    <!-- Main -->
     <main>
 
-        <!-- Home Section -->
+        <!-- Home -->
         <section id="home">
 
             <h1>Almadina Computer</h1>
 
-
-            <!-- Figure and Figcaption -->
             <figure>
-
-                <img src="./images/cmp.jpg"
-                     alt="Almadina Computer Store">
+                <img src="./images/cmp.jpg" alt="Almadina Computer Store">
 
                 <figcaption>
                     Almadina Computer - Computers, Laptops & Accessories
                 </figcaption>
-
             </figure>
-
 
             <p>
                 A computer shop is a place where people can buy,
-                repair, and upgrade computers and related accessories.
+                repair and upgrade computers and related accessories.
             </p>
 
-
-            <!-- Mark -->
             <p>
                 We provide
                 <mark>reliable computer and laptop services</mark>
                 for our customers.
             </p>
 
-
             <a href="#services">View Services</a>
 
         </section>
 
 
-        <!-- About Section -->
+        <!-- About -->
         <section id="about">
 
             <h2>About Us</h2>
@@ -81,121 +70,93 @@
                 laptops, accessories and technical services.
             </p>
 
-
             <ul>
                 <li>Quality Computer & Laptop Products</li>
                 <li>Fast & Reliable Repair Services</li>
                 <li>Genuine Computer Accessories</li>
             </ul>
 
-
-            <!-- Aside -->
             <aside>
-
                 <h3>Why Choose Almadina Computer?</h3>
 
                 <p>
                     We provide reliable products and professional
                     computer services at reasonable prices.
                 </p>
-
             </aside>
 
-
-            <!-- Abbreviation -->
             <p>
                 We provide support for
                 <abbr title="Information Technology">IT</abbr>
                 related computer problems.
             </p>
 
-
             <a href="mailto:aush7845@gmail.com">Gmail</a>
-
             <a href="https://www.google.com">Google</a>
 
         </section>
 
 
-        <!-- Services Section -->
+        <!-- Services -->
         <section id="services">
 
             <h2>Our Services</h2>
 
-
-            <!-- Div Container -->
             <div class="services-container">
 
-
                 <article>
-
                     <h3>Computer Repair</h3>
 
                     <p>
                         Fast and reliable repair services
                         for computers and laptops.
                     </p>
-
                 </article>
 
-
                 <article>
-
                     <h3>Laptop Sales</h3>
 
                     <p>
                         Quality laptops for students,
                         professionals and everyday use.
                     </p>
-
                 </article>
 
-
                 <article>
-
                     <h3>Computer Accessories</h3>
 
                     <p>
                         Keyboards, mice, headphones,
                         USB devices and other accessories.
                     </p>
-
                 </article>
 
             </div>
 
 
-            <!-- FAQ using Details and Summary -->
-
+            <!-- FAQ -->
             <h2>Frequently Asked Questions</h2>
 
-
             <details>
-
                 <summary>Do you repair laptops?</summary>
 
                 <p>
                     Yes, we provide laptop repair and
                     maintenance services.
                 </p>
-
             </details>
 
-
             <details>
-
                 <summary>Do you sell computer accessories?</summary>
 
                 <p>
                     Yes, we sell keyboards, mice,
-                    headphones, USB devices and more.
+                    headphones and USB devices.
                 </p>
-
             </details>
 
 
-            <!-- Time -->
-
+            <!-- Opening Time -->
             <p>
                 Our services are available from
                 <time datetime="09:00">9:00 AM</time>
@@ -204,20 +165,16 @@
             </p>
 
 
-            <!-- Product Table -->
-
+            <!-- Products Table -->
             <table>
 
                 <thead>
-
                     <tr>
                         <th>Product</th>
                         <th>Category</th>
                         <th>Availability</th>
                     </tr>
-
                 </thead>
-
 
                 <tbody>
 
@@ -246,57 +203,194 @@
         </section>
 
 
-        <!-- Contact Section -->
+        <!-- Contact -->
         <section id="contact">
 
             <h2>Contact Us</h2>
 
-
             <form>
 
-                <label for="name">Name</label>
+                <!-- Customer Information -->
+                <fieldset>
 
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Enter your name"
-                    required
-                >
+                    <legend>Customer Information</legend>
 
 
-                <label for="email">Email</label>
+                    <!-- Name -->
+                    <label for="name">Name</label>
 
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Enter email"
-                    required
-                >
-
-
-                <label for="phone">Phone</label>
-
-                <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    placeholder="Phone number"
-                    required
-                >
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                        minlength="3"
+                        maxlength="30"
+                    >
 
 
-                <label for="message">Message</label>
+                    <!-- Email -->
+                    <label for="email">Email</label>
 
-                <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Write your message"
-                    required
-                ></textarea>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
 
 
+                    <!-- Phone -->
+                    <label for="phone">Phone</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="03XXXXXXXXX"
+                        required
+                        pattern="[0-9]{11}"
+                    >
+
+                </fieldset>
+
+
+                <!-- Service Information -->
+                <fieldset>
+
+                    <legend>Service Information</legend>
+
+
+                    <!-- Select + Optgroup -->
+                    <label for="service">Select Service</label>
+
+                    <select id="service" name="service" required>
+
+                        <option value="">
+                            Select a service
+                        </option>
+
+                        <optgroup label="Repair Services">
+
+                            <option value="computer-repair">
+                                Computer Repair
+                            </option>
+
+                            <option value="laptop-repair">
+                                Laptop Repair
+                            </option>
+
+                        </optgroup>
+
+
+                        <optgroup label="Sales">
+
+                            <option value="laptop-sales">
+                                Laptop Sales
+                            </option>
+
+                            <option value="accessories">
+                                Computer Accessories
+                            </option>
+
+                        </optgroup>
+
+                    </select>
+
+
+                    <!-- Date -->
+                    <label for="date">Preferred Date</label>
+
+                    <input
+                        type="date"
+                        id="date"
+                        name="date"
+                        required
+                    >
+
+
+                    <!-- Budget -->
+                    <label for="budget">Budget</label>
+
+                    <input
+                        type="number"
+                        id="budget"
+                        name="budget"
+                        placeholder="Enter your budget"
+                        min="1000"
+                        max="500000"
+                    >
+
+
+                    <!-- Website -->
+                    <label for="website">Website</label>
+
+                    <input
+                        type="url"
+                        id="website"
+                        name="website"
+                        placeholder="https://example.com"
+                    >
+
+
+                    <!-- Search -->
+                    <label for="search">Search Product</label>
+
+                    <input
+                        type="search"
+                        id="search"
+                        name="search"
+                        placeholder="Search product"
+                    >
+
+
+                    <!-- Range -->
+                    <label for="rating">Service Priority</label>
+
+                    <input
+                        type="range"
+                        id="rating"
+                        name="rating"
+                        min="1"
+                        max="10"
+                        value="5"
+                    >
+
+
+                    <!-- Color -->
+                    <label for="color">Choose Color</label>
+
+                    <input
+                        type="color"
+                        id="color"
+                        name="color"
+                    >
+
+                </fieldset>
+
+
+                <!-- Message -->
+                <fieldset>
+
+                    <legend>Your Message</legend>
+
+                    <label for="message">Message</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Write your message"
+                        required
+                        minlength="10"
+                        maxlength="500"
+                    ></textarea>
+
+                </fieldset>
+
+
+                <!-- Submit -->
                 <button type="submit">
                     Send Message
                 </button>
@@ -316,8 +410,6 @@
         <p>
             © 2026 Almadina Computers. All Rights Reserved.
         </p>
-
-        <!-- Last Updated Date -->
 
         <p>
             Last updated:
