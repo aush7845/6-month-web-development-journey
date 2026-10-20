@@ -4,31 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 10 - CSS Box Model</title>
+    <title>Day 11 - CSS Flexbox</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>CSS Box Model</h1>
-        <p>Learn margin, padding, border, width and height.</p>
+    <header class="header">
+        <h1>Flexbox Practice</h1>
+
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <main>
-        <section class="box">
-            <h2>Understanding the Box Model</h2>
+    <main id="home">
+        <section>
+            <h2>What Is Flexbox?</h2>
             <p>
-                Every HTML element is represented as a rectangular box.
-                CSS controls its content, padding, border and margin.
+                Flexbox is a CSS layout system used to arrange
+                elements in rows or columns and control their alignment.
             </p>
         </section>
 
-        <section class="card">
-            <h2>Computer Store</h2>
-            <p>Explore computers, laptops and accessories.</p>
-            <button type="button">Learn More</button>
+        <section>
+            <h2>Flex Direction</h2>
+
+            <div class="direction-container">
+                <div class="direction-box">Item 1</div>
+                <div class="direction-box">Item 2</div>
+                <div class="direction-box">Item 3</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Our Services</h2>
+
+            <div class="card-container">
+                <article class="card">
+                    <h3>Web Design</h3>
+                    <p>Create attractive and user-friendly websites.</p>
+                    <a href="#contact">Learn More</a>
+                </article>
+
+                <article class="card">
+                    <h3>Web Development</h3>
+                    <p>Build functional websites using web technologies.</p>
+                    <a href="#contact">Learn More</a>
+                </article>
+
+                <article class="card">
+                    <h3>Responsive Design</h3>
+                    <p>Make websites work across different screen sizes.</p>
+                    <a href="#contact">Learn More</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Practicing layouts with CSS Flexbox.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Learn and practice one topic at a time.</p>
         </section>
     </main>
+
+    <footer>
+        <p>Day 11 — CSS Flexbox Practice</p>
+    </footer>
 
 </body>
 </html>
