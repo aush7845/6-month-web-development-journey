@@ -4,92 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 8 - HTML Accessibility</title>
+
+    <!-- SEO Title -->
+    <title>Almadina Computer | Computers, Laptops & Repair Services</title>
+
+    <!-- Meta Description -->
+    <meta
+        name="description"
+        content="Explore computers, laptops, accessories and reliable computer repair services at Almadina Computer."
+    >
 </head>
+
 <body>
 
     <header>
-        <h1>HTML Accessibility</h1>
-        <p>Learning to make websites accessible to everyone.</p>
+        <h1>Almadina Computer</h1>
+        <p>Your trusted computer and laptop store.</p>
+
+        <nav aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <nav aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <main id="home">
-
-        <section id="about">
-            <h2>What Is Accessibility?</h2>
+    <main>
+        <section id="home">
+            <h2>Computers, Laptops and Accessories</h2>
             <p>
-                Accessibility helps people with different abilities
-                use and understand websites.
+                Discover computers, laptops and accessories
+                for your everyday technology needs.
             </p>
-
-            <img
-                src="images/cmp.jpg"
-                alt="People using accessible digital technology"
-                width="400"
-            >
         </section>
 
-        <section>
-            <h2>Semantic HTML</h2>
-            <p>Semantic elements give meaning to website content.</p>
+        <section id="about">
+            <h2>About Almadina Computer</h2>
+            <p>
+                Almadina Computer provides technology products
+                and computer-related services for its customers.
+            </p>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
 
             <article>
-                <h3>Why Is It Important?</h3>
+                <h3>Computer Repair</h3>
                 <p>
-                    Semantic HTML helps browsers, screen readers
-                    and developers understand the page structure.
+                    Get help with computer troubleshooting
+                    and repair services.
+                </p>
+            </article>
+
+            <article>
+                <h3>Laptop Accessories</h3>
+                <p>
+                    Explore useful accessories for laptops
+                    and computers.
                 </p>
             </article>
         </section>
 
         <section id="contact">
-            <h2>Contact Form</h2>
-
-            <form>
-                <div>
-                    <label for="name">Full Name:</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                    >
-                </div>
-
-                <div>
-                    <label for="email">Email Address:</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                    >
-                </div>
-
-                <div>
-                    <label for="message">Your Message:</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="4"
-                        required
-                    ></textarea>
-                </div>
-
-                <button type="submit">Send Message</button>
-            </form>
+            <h2>Contact Us</h2>
+            <p>Contact us for product and service information.</p>
+            <a href="mailto:info@example.com">Email Us</a>
         </section>
-
     </main>
 
     <footer>
-        <p>HTML Accessibility Practice</p>
+        <p>&copy; 2026 Almadina Computer. All rights reserved.</p>
     </footer>
 
 </body>
