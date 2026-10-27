@@ -4,72 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 12 - CSS Grid</title>
+    <meta name="description" content="Explore computers and accessories at Tech Store.">
+    <title>Day 13 - Responsive Tech Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="header">
-        <h1>Tech Store</h1>
-        <p>Explore our latest products</p>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="logo" href="#home">Tech Store</a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="container">
-        <section class="product-grid" aria-label="Products">
+    <main>
+        <section class="hero" id="home">
+            <h1>Welcome to Tech Store</h1>
+            <p>Explore technology for work, study and everyday life.</p>
+            <a class="hero-button" href="#products">Explore Products</a>
+        </section>
 
-            <article class="product-card">
-                <div class="product-image">💻</div>
-                <h2>Laptop</h2>
-                <p>Powerful laptop for everyday work.</p>
-                <p class="price">Rs. 85,000</p>
-                <button type="button">View Product</button>
-            </article>
+        <section class="products-section" id="products">
+            <h2>Our Products</h2>
 
-            <article class="product-card">
-                <div class="product-image">🖥️</div>
-                <h2>Desktop PC</h2>
-                <p>A reliable computer for your setup.</p>
-                <p class="price">Rs. 65,000</p>
-                <button type="button">View Product</button>
-            </article>
+            <div class="product-grid">
+                <article class="product-card">
+                    <div class="product-image" aria-hidden="true">💻</div>
+                    <h3>Laptop</h3>
+                    <p>A useful device for study and work.</p>
+                    <p class="price">Rs. 85,000</p>
+                </article>
 
-            <article class="product-card">
-                <div class="product-image">⌨️</div>
-                <h2>Keyboard</h2>
-                <p>Comfortable keyboard for daily use.</p>
-                <p class="price">Rs. 3,000</p>
-                <button type="button">View Product</button>
-            </article>
+                <article class="product-card">
+                    <div class="product-image" aria-hidden="true">🖥️</div>
+                    <h3>Desktop PC</h3>
+                    <p>A reliable computer for your workspace.</p>
+                    <p class="price">Rs. 65,000</p>
+                </article>
 
-            <article class="product-card">
-                <div class="product-image">🖱️</div>
-                <h2>Mouse</h2>
-                <p>A practical mouse for work and study.</p>
-                <p class="price">Rs. 1,500</p>
-                <button type="button">View Product</button>
-            </article>
+                <article class="product-card">
+                    <div class="product-image" aria-hidden="true">⌨️</div>
+                    <h3>Keyboard</h3>
+                    <p>A practical accessory for daily typing.</p>
+                    <p class="price">Rs. 3,000</p>
+                </article>
 
-            <article class="product-card">
-                <div class="product-image">🎧</div>
-                <h2>Headphones</h2>
-                <p>Enjoy music and online meetings.</p>
-                <p class="price">Rs. 4,000</p>
-                <button type="button">View Product</button>
-            </article>
+                <article class="product-card">
+                    <div class="product-image" aria-hidden="true">🖱️</div>
+                    <h3>Mouse</h3>
+                    <p>Navigate your computer comfortably.</p>
+                    <p class="price">Rs. 1,500</p>
+                </article>
 
-            <article class="product-card">
-                <div class="product-image">📷</div>
-                <h2>Webcam</h2>
-                <p>Useful for video calls and classes.</p>
-                <p class="price">Rs. 5,000</p>
-                <button type="button">View Product</button>
-            </article>
+                <article class="product-card">
+                    <div class="product-image" aria-hidden="true">🎧</div>
+                    <h3>Headphones</h3>
+                    <p>For music, classes and online meetings.</p>
+                    <p class="price">Rs. 4,000</p>
+                </article>
 
+                <article class="product-card">
+                    <div class="product-image" aria-hidden="true">📷</div>
+                    <h3>Webcam</h3>
+                    <p>Useful for video calls and classes.</p>
+                    <p class="price">Rs. 5,000</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: hello@example.com</p>
         </section>
     </main>
 
     <footer class="footer">
-        <p>Day 12 Practice — CSS Grid</p>
+        <p>Day 13 Practice — Responsive Design</p>
     </footer>
 
 </body>
