@@ -1,5 +1,5 @@
 
-/* Day 13: Responsive Design */
+/* Day 14: Animations, Transitions and Hover Effects */
 
 * {
     box-sizing: border-box;
@@ -13,20 +13,19 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #202b3c;
-    background-color: #f4f6f9;
+    background-color: #f5f7fb;
 }
 
 /* Navigation */
 
-.site-header {
+.header {
     background-color: #172554;
-    color: white;
 }
 
 .navbar {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 18px 24px;
+    padding: 20px 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,68 +34,111 @@ body {
 
 .logo {
     color: white;
-    text-decoration: none;
     font-size: 24px;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .nav-links {
     display: flex;
     gap: 24px;
     list-style: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
+    color: #fbbf24;
 }
 
-/* Welcome section */
+/* Hero section */
 
 .hero {
-    text-align: center;
-    padding: 70px 24px;
-    background-color: #dbeafe;
+    min-height: 360px;
+    padding: 60px 24px;
+    background: linear-gradient(135deg, #dbeafe, #ede9fe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 }
 
-.hero h1 {
-    font-size: 38px;
-    margin-top: 0;
+.hero-content {
+    max-width: 650px;
 }
 
-.hero p {
-    line-height: 1.7;
+.eyebrow {
+    color: #4338ca;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
-.hero-button {
+.animated-heading {
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 16px 0;
+    animation: fadeInUp 0.8s ease both;
+}
+
+.hero-description {
+    line-height: 1.8;
+    color: #475569;
+}
+
+.hero-button,
+.product-button {
     display: inline-block;
-    margin-top: 12px;
-    padding: 12px 20px;
+    padding: 12px 18px;
     background-color: #1d4ed8;
     color: white;
+    border-radius: 7px;
     text-decoration: none;
-    border-radius: 6px;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-/* Product layout */
+.hero-button:hover,
+.product-button:hover {
+    background-color: #172554;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(23, 37, 84, 0.2);
+}
 
-.products-section,
-.contact-section {
+/* Floating animation */
+
+.floating-icon {
+    font-size: 100px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Product section */
+
+.products-section {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 36px 24px;
+    padding: 45px 24px;
 }
 
-.products-section > h2,
-.contact-section > h2 {
+.products-section h2,
+.about-section h2 {
     text-align: center;
-    margin-top: 0;
+    font-size: 30px;
+}
+
+.section-description {
+    text-align: center;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 30px;
 }
 
 .product-grid {
@@ -107,23 +149,38 @@ body {
 
 .product-card {
     min-width: 0;
+    padding: 24px;
     background-color: white;
-    border: 1px solid #dce2eb;
+    border: 1px solid #e2e8f0;
     border-radius: 12px;
-    padding: 22px;
     text-align: center;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
 }
 
-.product-image {
-    font-size: 48px;
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12);
+    border-color: #93c5fd;
+}
+
+.product-icon {
+    font-size: 54px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-icon {
+    transform: scale(1.12);
 }
 
 .product-card h3 {
-    margin-bottom: 8px;
+    font-size: 21px;
 }
 
 .product-card p {
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .price {
@@ -131,51 +188,83 @@ body {
     font-weight: bold;
 }
 
+.product-button {
+    margin-top: 8px;
+}
+
+/* About section */
+
+.about-section {
+    padding: 40px 24px;
+    text-align: center;
+    background-color: #e2e8f0;
+}
+
+.about-section p {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
 /* Footer */
 
 .footer {
+    padding: 20px;
+    text-align: center;
     background-color: #172554;
     color: white;
-    text-align: center;
-    padding: 20px;
 }
 
-/* Tablet: 2 columns */
+/* Keyframes */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* Tablet */
 
 @media (max-width: 768px) {
-    .navbar {
-        padding: 16px;
-    }
-
-    .nav-links {
-        gap: 14px;
-    }
-
     .hero {
-        padding: 50px 20px;
+        padding: 45px 20px;
+        gap: 20px;
     }
 
-    .hero h1 {
-        font-size: 30px;
+    .animated-heading {
+        font-size: 32px;
+    }
+
+    .floating-icon {
+        font-size: 70px;
     }
 
     .product-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 16px;
-    }
-
-    .products-section,
-    .contact-section {
-        padding: 28px 16px;
     }
 }
 
-/* Mobile: 1 column */
+/* Mobile */
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     .navbar {
         flex-direction: column;
-        gap: 14px;
     }
 
     .nav-links {
@@ -185,18 +274,33 @@ body {
     }
 
     .hero {
-        padding: 36px 16px;
+        flex-direction: column;
+        text-align: center;
+        padding: 35px 18px;
     }
 
-    .hero h1 {
-        font-size: 26px;
+    .animated-heading {
+        font-size: 28px;
+    }
+
+    .floating-icon {
+        font-size: 65px;
     }
 
     .product-grid {
         grid-template-columns: 1fr;
     }
+}
 
-    .product-card {
-        padding: 18px;
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
     }
 }

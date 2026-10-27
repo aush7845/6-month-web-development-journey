@@ -5,86 +5,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore computers and accessories at Tech Store.">
-    <title>Day 13 - Responsive Tech Store</title>
+    <title>Day 14 - CSS Animations</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="site-header">
+    <header class="header">
         <nav class="navbar" aria-label="Main navigation">
             <a class="logo" href="#home">Tech Store</a>
 
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#products">Products</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="hero" id="home">
-            <h1>Welcome to Tech Store</h1>
-            <p>Explore technology for work, study and everyday life.</p>
-            <a class="hero-button" href="#products">Explore Products</a>
+            <div class="hero-content">
+                <p class="eyebrow">TECHNOLOGY FOR EVERYDAY LIFE</p>
+
+                <h1 class="animated-heading">
+                    Discover Your Next Device
+                </h1>
+
+                <p class="hero-description">
+                    Explore computers and accessories for work,
+                    study and creativity.
+                </p>
+
+                <a class="hero-button" href="#products">
+                    Explore Products
+                </a>
+            </div>
+
+            <div class="floating-icon" aria-hidden="true">
+                💻
+            </div>
         </section>
 
         <section class="products-section" id="products">
-            <h2>Our Products</h2>
+            <h2>Featured Products</h2>
+            <p class="section-description">
+                Move your mouse over the cards to see the effects.
+            </p>
 
             <div class="product-grid">
                 <article class="product-card">
-                    <div class="product-image" aria-hidden="true">💻</div>
+                    <div class="product-icon" aria-hidden="true">💻</div>
                     <h3>Laptop</h3>
-                    <p>A useful device for study and work.</p>
+                    <p>For study, work and daily tasks.</p>
                     <p class="price">Rs. 85,000</p>
+                    <a class="product-button" href="#about">Learn More</a>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image" aria-hidden="true">🖥️</div>
+                    <div class="product-icon" aria-hidden="true">🖥️</div>
                     <h3>Desktop PC</h3>
-                    <p>A reliable computer for your workspace.</p>
+                    <p>A dependable desktop setup.</p>
                     <p class="price">Rs. 65,000</p>
+                    <a class="product-button" href="#about">Learn More</a>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image" aria-hidden="true">⌨️</div>
-                    <h3>Keyboard</h3>
-                    <p>A practical accessory for daily typing.</p>
-                    <p class="price">Rs. 3,000</p>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-image" aria-hidden="true">🖱️</div>
-                    <h3>Mouse</h3>
-                    <p>Navigate your computer comfortably.</p>
-                    <p class="price">Rs. 1,500</p>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-image" aria-hidden="true">🎧</div>
+                    <div class="product-icon" aria-hidden="true">🎧</div>
                     <h3>Headphones</h3>
-                    <p>For music, classes and online meetings.</p>
+                    <p>For music, meetings and classes.</p>
                     <p class="price">Rs. 4,000</p>
-                </article>
-
-                <article class="product-card">
-                    <div class="product-image" aria-hidden="true">📷</div>
-                    <h3>Webcam</h3>
-                    <p>Useful for video calls and classes.</p>
-                    <p class="price">Rs. 5,000</p>
+                    <a class="product-button" href="#about">Learn More</a>
                 </article>
             </div>
         </section>
 
-        <section class="contact-section" id="contact">
-            <h2>Contact Us</h2>
-            <p>Email: hello@example.com</p>
+        <section class="about-section" id="about">
+            <h2>Technology Made Simple</h2>
+            <p>
+                This practice project demonstrates CSS hover effects,
+                transitions and keyframe animations.
+            </p>
         </section>
     </main>
 
     <footer class="footer">
-        <p>Day 13 Practice — Responsive Design</p>
+        <p>Day 14 Practice — CSS Animations</p>
     </footer>
 
 </body>
